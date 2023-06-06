@@ -6,3 +6,23 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
+void Main()
+{
+    Numbers(ReadInt("Enter avalue of N: "));
+}
+
+int ReadInt(string text)
+{
+    System.Console.WriteLine(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+void Numbers(int N)
+{
+    if(N < 1) return;
+    System.Console.Write(N + " ");
+    Numbers(N-1); 
+}
+
+Main();
+
